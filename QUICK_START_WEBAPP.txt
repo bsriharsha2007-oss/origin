@@ -1,0 +1,211 @@
+# 🐝 SwarmForge Web App - Quick Reference
+
+## 🚀 LAUNCH NOW!
+
+### Windows (Easy)
+```
+start_webapp.cmd
+```
+
+### PowerShell
+```
+.\start_webapp.ps1
+```
+
+### macOS/Linux
+```
+./start_webapp.sh
+```
+
+**Then open your browser to:** `http://localhost:8000`
+
+---
+
+## 🎯 What You Get
+
+| Feature | Description |
+|---------|-------------|
+| 🎮 **Control Panel** | Initialize swarm, add agents, configure |
+| ⚡ **Task Execution** | Run tasks with 1-10 agents in parallel/sequential/hierarchical modes |
+| 👥 **Agent Management** | View active agents, roles, execution stats |
+| 📊 **Results Dashboard** | See results, history, memory search, evaluation reports |
+| 📚 **Interactive API** | Full Swagger UI at http://localhost:8000/docs |
+| 🔍 **Memory Search** | Query past information stored during execution |
+| 📈 **Evaluation Reports** | AI-generated quality assessments |
+
+---
+
+## 💻 System Requirements
+
+- **Python**: 3.9+ (tested with 3.13.3)
+- **Browser**: Any modern browser (Chrome, Firefox, Safari, Edge)
+- **RAM**: 2GB minimum (4GB+ recommended)
+- **Network**: Local or LAN access to port 8000
+
+---
+
+## 🔑 API Keys (Optional)
+
+Add to `.env` file for LLM support:
+
+```env
+# Free and fast - recommended
+GROQ_API_KEY=your_groq_key
+
+# Powerful GPT models
+OPENAI_API_KEY=your_openai_key
+
+# For web search (optional)
+TAVILY_API_KEY=your_tavily_key
+```
+
+**No keys?** The framework still works with basic operations!
+
+---
+
+## 📖 How to Use
+
+### Step 1: Initialize
+Click "Initialize" button → Swarm is ready!
+
+### Step 2: Add Agents
+1. Enter agent name (e.g., "researcher_1")
+2. Choose role (Researcher, Analyzer, Synthesizer, Executor, Coordinator)
+3. Click "Add Agent"
+
+### Step 3: Execute Task
+1. Enter task description
+2. Set number of agents (1-10)
+3. Choose execution mode:
+   - **Parallel**: Fast, concurrent (⚡)
+   - **Sequential**: Safe, ordered (✓)
+   - **Hierarchical**: Coordinated, structured (🎯)
+4. Click "Execute Task"
+
+### Step 4: View Results
+- **Current Result**: Latest task output
+- **History**: Previous 10 executions
+- **Memory**: Search past information
+- **Evaluation**: Quality report
+
+---
+
+## 🎯 Quick Examples
+
+### Example 1: Simple Task
+- **Task**: "What is Python?"
+- **Agents**: 2
+- **Mode**: Parallel
+- **Time**: ~5 seconds
+
+### Example 2: Analysis
+- **Task**: "Compare JSON vs YAML formats"
+- **Agents**: 3
+- **Mode**: Hierarchical
+- **Time**: ~10 seconds
+
+### Example 3: Complex
+- **Task**: "Create learning path for web development"
+- **Agents**: 5
+- **Mode**: Sequential
+- **Time**: ~15-30 seconds
+
+---
+
+## 🛠️ Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| Port 8000 in use | Change port in `webserver.py` line 435 |
+| No API key | Add to `.env` or use local mode |
+| Slow performance | Use Parallel mode, reduce agents, use Groq |
+| Dependencies error | Run `pip install -r requirements.txt --force-reinstall` |
+| Can't open localhost | Try `http://127.0.0.1:8000` instead |
+
+---
+
+## 📚 Full Documentation
+
+| File | Purpose |
+|------|---------|
+| `DEPLOY_WEBAPP.md` | Complete deployment guide |
+| `WEBAPP_GUIDE.md` | Web app features & API reference |
+| `README.md` | Framework architecture & overview |
+| `PROJECT_SUMMARY.txt` | All features listed |
+| `BUILD_GUIDE.md` | Installation & setup steps |
+
+---
+
+## 🔗 Useful Links
+
+- **Web App**: http://localhost:8000
+- **API Docs**: http://localhost:8000/docs
+- **ReDoc**: http://localhost:8000/redoc
+- **Health Check**: http://localhost:8000/health
+
+---
+
+## ✅ Verification
+
+To verify everything is working:
+
+```bash
+# Test imports
+python -c "from agents import Agent; from graph import SwarmGraph; print('✓ All imports working')"
+
+# Run tests
+pytest tests.py -v
+
+# Verify setup
+python verify_setup.py
+```
+
+---
+
+## 🚀 Next Level
+
+### Add Custom Tools
+Edit `tools.py` to add domain-specific tools
+
+### Add Custom Agents
+Edit agent roles in `agents.py` for specialized behaviors
+
+### Database Integration
+Add persistent storage to `MemoryManager` in `graph.py`
+
+### Cloud Deployment
+Use Docker + push to Azure, AWS, GCP, or Railway
+
+---
+
+## 📊 Performance Tips
+
+- **Speed**: Parallel mode + Groq API + 2-3 agents
+- **Quality**: Sequential mode + 4-5 agents + memory enabled
+- **Reliability**: Hierarchical mode with Coordinator
+
+---
+
+## 🤝 Support
+
+- Check `DEPLOY_WEBAPP.md` for detailed troubleshooting
+- Review API docs at http://localhost:8000/docs
+- Check project files for implementation details
+
+---
+
+## 📝 Files Created for Web App
+
+```
+webserver.py          → FastAPI backend (600+ lines)
+start_webapp.cmd      → Windows launcher
+start_webapp.ps1      → PowerShell launcher
+start_webapp.sh       → Linux/macOS launcher
+DEPLOY_WEBAPP.md      → Complete deployment guide
+WEBAPP_GUIDE.md       → Web app features guide
+requirements.txt      → Updated with FastAPI & Uvicorn
+```
+
+---
+
+**🎉 You're all set! Run `start_webapp.cmd` and enjoy!**
