@@ -2,6 +2,12 @@
 
 A production-ready framework for building scalable multi-agent AI systems with LLM coordination, parallel/sequential execution, tool integration, memory management, and output evaluation.
 
+Web App Quick Start
+
+- Run the embedded FastAPI web UI: `python webserver.py`
+- Open the web UI in your browser at `http://127.0.0.1:8000`
+- If your browser rejects `localhost:8000`, use `http://127.0.0.1:8000` (copy-paste the exact URL).
+
 ## 🚀 Features
 
 - **Multi-Agent Orchestration**: Coordinate multiple specialized AI agents
