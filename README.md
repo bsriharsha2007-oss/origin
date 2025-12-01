@@ -67,6 +67,37 @@ This will launch an interactive menu where you can:
 3. **Full Workflow** - End-to-end multi-agent orchestration
 4. Exit
 
+### Launch Web App from Desktop Shortcut (Windows)
+
+**Option A: Create a shortcut manually**
+1. Right-click on Desktop → New → Shortcut
+2. Enter this location:
+   ```
+   powershell -Command "cd C:\Users\91900\OneDrive\Desktop\swarmforge; python webserver.py; pause"
+   ```
+   (Adjust the path if your folder is elsewhere)
+3. Name it `SwarmForge Webapp`
+4. Right-click the shortcut → Properties → Advanced → Check "Run as Administrator" (if needed)
+5. Click the shortcut to launch the web server
+6. Open Chrome and go to: `http://127.0.0.1:8000`
+
+**Option B: Use the pre-built launcher**
+```bash
+# Windows PowerShell or Command Prompt
+RUN_WEBAPP.bat
+```
+This runs the server in a dedicated terminal window.
+
+**Option C: One-liner in PowerShell**
+```powershell
+cd "C:\Users\91900\OneDrive\Desktop\swarmforge"; python webserver.py
+```
+
+**Troubleshooting:**
+- If you see "Please enter a valid URL" in Chrome, use `http://127.0.0.1:8000` instead of `localhost:8000`
+- If port 8000 is already in use, kill the process: `Stop-Process -Name python -Force` then restart
+- Check browser console (F12) if you get "link is not valid" at form submission — you likely need to add an API key to `.env`
+
 ### Example: Create Your Own Swarm
 
 ```python
